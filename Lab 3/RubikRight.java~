@@ -1,0 +1,21 @@
+class RubikRight {
+
+    private final Rubik rubik;
+
+    RubikRight(Rubik rubik) {
+        this.rubik = rubik;
+    }   
+
+    Rubik left() {
+        return this.rubik.rightView().left().leftView();
+    }   
+
+    Rubik right() {
+        return this.rubik.rightView().right().leftView();
+    }   
+
+    Rubik half() {
+        return this.rubik.rightView().half().leftView();
+    }   
+}
+

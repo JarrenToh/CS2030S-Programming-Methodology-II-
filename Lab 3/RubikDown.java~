@@ -1,0 +1,21 @@
+class RubikDown {
+
+    private final Rubik rubik;
+
+    RubikDown(Rubik rubik) {
+        this.rubik = rubik;
+    }   
+
+    Rubik left() {
+        return this.rubik.downView().left().upView();
+    }   
+
+    Rubik right() {
+        return this.rubik.downView().right().upView();
+    }   
+
+    Rubik half() {
+        return this.rubik.downView().half().upView();
+    }   
+}
+
