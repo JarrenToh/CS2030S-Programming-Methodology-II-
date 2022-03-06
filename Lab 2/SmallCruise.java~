@@ -1,0 +1,10 @@
+class SmallCruise extends Cruise {
+
+    private final static int numOfLoader = 1;
+    private final static int serviceTime = 30;
+
+    SmallCruise(String identifier, int arrivalTime) {
+        super(identifier,arrivalTime,numOfLoader,serviceTime);
+    }
+}
+
