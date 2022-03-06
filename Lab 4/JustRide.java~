@@ -1,0 +1,25 @@
+class JustRide implements Fare {
+
+    private static final int perKm = 22;
+    private static final int peakHourStart = 600;
+    private static final int peakHourEnd = 900;
+
+    @Override
+    public int computeFare(Request request) {
+        int totalFare = 0;
+
+        if (request.getTime() >= this.peakHourStart 
+                && request.getTime() <= this.peakHourEnd) {
+            totalFare += 500;
+        }
+
+        totalFare += request.getDistance() * this.perKm;
+
+        return totalFare;
+    }
+
+    @Override
+    public String toString() {
+        return "JustRide";
+    }
+}
